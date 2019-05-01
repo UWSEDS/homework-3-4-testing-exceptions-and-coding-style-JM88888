@@ -1,0 +1,8 @@
+Johns-MacBook-Pro:homework-3-4-testing-exceptions-and-coding-style-JM88888 Jack$ pylint test_dataframe.py
+No config file found, using default configuration
+************* Module test_dataframe
+R: 17, 4: Method could be a function (no-self-use)
+R: 23, 4: Method could be a function (no-self-use)
+
+-------------------------------------------------------------------
+Your code has been rated at 8.18/10 (previous run: -0.91/10, +9.09)
