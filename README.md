@@ -1,5 +1,13 @@
 # Homework 3-4: Coding style and Unit tests.
 
+##### Grade: 10/14   
+
+-2: dataframe.py, line #22 - by calling ```check = data_frame.columns == df_cols```, you are enforcing order to the column names. (Two lists that have the same strings but in different orders will not be onsidered equal.)     
+
+-2: test_dataframe.py - test names should be more descriptive   
+
+-----
+
 **Note: This homework has a total of 14 points.**
 
 In this homework, you will create two python modules and put them in PEP8 style.
