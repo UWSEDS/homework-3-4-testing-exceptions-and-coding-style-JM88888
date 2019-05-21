@@ -14,13 +14,13 @@ class TestPermits(unittest.TestCase):
     This class contains tests for na values and at least one row in the dataframe
     """
 
-    def test_success(self):
+    def test_for_any_null_values(self):
         """
         test for any null values
         """
         assert pd.notnull(DF.values).any()
 
-    def test_success1(self):
+    def test_for_at_least_one_row(self):
         """
         test for at least one row
         """
