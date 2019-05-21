@@ -1,5 +1,6 @@
 """This module gets a dataframe of seattle building permits checks column names"""
 import pandas as pd
+import collections
 
 
 def get_permits(data_frame=pd.read_csv("https://data.seattle.gov/api/views/76t5-zqzr/rows.csv?accessType=DOWNLOAD",
@@ -10,15 +11,16 @@ Gets the building permits
     """
     permits = data_frame
     permits = permits.dropna()
-    check_cols(permits)
+    check_col_names(permits)
     return permits
 
 
-def check_cols(data_frame):
+def check_col_names(data_frame):
     """
 Checks the dataframe column names
     """
-    df_cols = ["PermitClass", "PermitTypeDesc", "EstProjectCost"]
-    check = data_frame.columns == df_cols
-    if not all(check):
+    df_cols_read = data_frame.columns
+    df_cols_expect = ["PermitClass", "PermitTypeDesc", "EstProjectCost"]
+    check = collections.Counter(df_cols_expect) == collections.Counter(df_cols_read)
+    if check == False:
         raise ValueError("Column names not the same")
