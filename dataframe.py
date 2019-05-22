@@ -21,6 +21,8 @@ Checks the dataframe column names
     """
     df_cols_read = data_frame.columns
     df_cols_expect = ["PermitClass", "PermitTypeDesc", "EstProjectCost"]
-    check = collections.Counter(df_cols_expect) == collections.Counter(df_cols_read)
-    if check == False:
-        raise ValueError("Column names not the same")
+    if len(df_cols_read) != len(df_cols_read):
+        raise ValueError("Different numbers of columns!")
+    for col in df_cols_read:
+        if col not in df_cols_expect:
+            raise ValueError("Column names not the same")
