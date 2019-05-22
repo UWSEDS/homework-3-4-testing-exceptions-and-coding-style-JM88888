@@ -1,4 +1,3 @@
-# coding: utf-8
 """This module contains two tests for the seattle building permits dataset"""
 import unittest
 import numpy as np
