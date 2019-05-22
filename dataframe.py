@@ -23,6 +23,6 @@ Checks the dataframe column names
     df_cols_expect = ["PermitClass", "PermitTypeDesc", "EstProjectCost"]
     if len(df_cols_read) != len(df_cols_read):
         raise ValueError("Different numbers of columns!")
-    for col in df_cols_read:
-        if col not in df_cols_expect:
+    for col in df_cols_expect:
+        if col not in df_cols_read:
             raise ValueError("Column names not the same")
