@@ -1,6 +1,9 @@
 # Homework 3-4: Coding style and Unit tests.
 
-##### Grade: 10/14   
+##### Final grade: 14/14  
+  
+
+Grade: 10/14   
 
 -2: dataframe.py, line #22 - by calling ```check = data_frame.columns == df_cols```, you are enforcing order to the column names. (Two lists that have the same strings but in different orders will not be onsidered equal.)     
 
